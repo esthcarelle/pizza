@@ -119,27 +119,27 @@ $("#add-order").click(function(){
 $(".again").append(' <div class="again1">'+
 '<div class="form-group size1">'+
 '<h2>Another Command</h2>'+
-       ' <label for="size">size</label>'+
-        '<input type="text" class="form-control" id="size">'+
+       ' <label for="size">Size:</label>'+
+        '<input type="text" class="form-control" id="size" placeholder="big,small,medium..>'+
 '</div>'+
 '<div class="topping">'+
 '<div class="form-group topping1" >'+
     
-        '<label for="topping">topping</label>'+
-        '<input type="text" class="form-control" id="topping">'
+        '<label for="topping">Topping:</label>'+
+        '<input type="text" class="form-control" id="topping" placeholder="vegetable..">'
     +'</div>'+ 
 '</div>'+
 
 '<div class="form-group crust1">'+
-        '<label for="crust">crust</label>'+
-        '<input type="text" class="form-control" id="crust">'+
+        '<label for="crust">Crust:</label>'+
+        '<input type="text" class="form-control" id="crust" placeholder="gluten..">'+
 '</div>'+
 '</div>'
 );
 });
 $("#add-topping").click(function(){
     $(".topping").last().append(' <div class="form-group topping1" >' +           
-    '<label for="topping">topping</label>'+
+    '<label for="topping">Topping:</label>'+
     '<input type="text" class="form-control" id="topping">'+
 '</div> ');
 });
@@ -194,8 +194,11 @@ $(".size1").each(function(){
   newClient.order.forEach(function(address) {
     $("ul#addresses").last().append("<p>" +"Topping:"+ address.topping +"="+top1 +"<br>"+"Size:"+address.size + "= " +top0 +"<br>"+"Crust:"+ address.crust +"="+top2+"<br>"+ "additional fee for delivery ="+additional+"<br>"+"total::"+result+"</p>"  );
   });
-
-// console.log(newOrder.size);
+  $("input#name").val("");
+  $("input#size").val("");
+  $("input#topping").val("");
+  $("input#crust").val("");
+  
 });
 
 
