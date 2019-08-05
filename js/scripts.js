@@ -22,80 +22,70 @@ var priceOfCrustofPizzaBig=["3000","3000","3000"];
 var i,top0=0,top1=0,top2=0,total,j,k,g,z,proof;
 function compare(inputtedSize,inputtedTopping,inputtedCrust){
 
-if((inputtedSize!="")&&(inputtedTopping!="")&&(inputtedCrust!=""))
-{
-    z=0;
-    for(k=0;k<inputtedSize.length;k++){
-        if(inputtedSize[k]=="small"){
-            top0=top0+1000;
-            proof="small";
-        }
-         else if(inputtedSize[k]=="medium"){
-            top0=top0+3000;
-            proof="medium";
-         }
-        else if(inputtedSize[k]=="big"){
-            top0=top0+5000;
-            proof="big";
-        }
-        else
-        alert("invalid input");
-        }
-            
-            for(g=0;g<=6;g++){
-                
-                for(j=0;j<inputtedTopping.length;j++){
-                    
-                    
-                    if((inputtedTopping[j]==toppingOfPizza[g])&&(proof=="small")){
-                            top1=top1 + parseInt(priceOfToppingOfPizzaSmall[g]);
-                            
-                    }
-                     if((inputtedTopping[j]==toppingOfPizza[g])&&(proof=="medium")){
-                        top1=top1 + parseInt(priceOfToppingOfPizzaMedium[g]);
-                        
-                }
-                 if((inputtedTopping[j]==toppingOfPizza[g])&&(proof=="big")){
-                    top1=top1 + parseInt(priceOfToppingOfPizzaBig[g]);
-                   
-                    
-                 }
-        
-                        }
-                        for(i=0;i<inputtedCrust.length;i++){
-                            
-                        if((crustOfPizza[g]==inputtedCrust[i])&&(proof=="small")){
-                            top2=top2+parseInt(priceOfCrustofPizzaSmall[g]);
-                           
-                        }
-                        if((crustOfPizza[g]==inputtedCrust[i])&&(proof=="medium")){
-                            top2=top2+parseInt(priceOfCrustofPizzaMedium[g]);
-                           
-                        }
-                         if((crustOfPizza[g]==inputtedCrust[i])&&(proof=="big")){
-                            top2=top2+parseInt(priceOfCrustofPizzaBig[g]);
-                           
-                        }
-                       
+    if((inputtedSize!="")&&(inputtedTopping!="")&&(inputtedCrust!=""))
+    {
+        z=0;
+        for(k=0;k<inputtedSize.length;k++){
+            if(inputtedSize[k]=="small"){
+                top0=top0+1000;
+                proof="small";
             }
-        }
-            console.log(top2);
-             console.log(inputtedTopping.length);             
-           
-           
-        
-        
+            else if(inputtedSize[k]=="medium"){
+                top0=top0+3000;
+                proof="medium";
+            }
+            else if(inputtedSize[k]=="big"){
+                top0=top0+5000;
+                proof="big";
+            }
+            else
+            alert("invalid input");
+            }
+                
+            for(g=0;g<=6;g++){
+                    
+                    for(j=0;j<inputtedTopping.length;j++){
+                        
+                        
+                            if((inputtedTopping[j]==toppingOfPizza[g])&&(proof=="small")){
+                                    top1=top1 + parseInt(priceOfToppingOfPizzaSmall[g]);
+                                    
+                            }
+                            if((inputtedTopping[j]==toppingOfPizza[g])&&(proof=="medium")){
+                            top1=top1 + parseInt(priceOfToppingOfPizzaMedium[g]);
+                            
+                                    }
+                            if((inputtedTopping[j]==toppingOfPizza[g])&&(proof=="big")){
+                                top1=top1 + parseInt(priceOfToppingOfPizzaBig[g]);
+                             
+                            }
+                    
+                    }
+                    for(i=0;i<inputtedCrust.length;i++){
+                                
+                            if((crustOfPizza[g]==inputtedCrust[i])&&(proof=="small")){
+                                top2=top2+parseInt(priceOfCrustofPizzaSmall[g]);
+                            
+                            }
+                            if((crustOfPizza[g]==inputtedCrust[i])&&(proof=="medium")){
+                                top2=top2+parseInt(priceOfCrustofPizzaMedium[g]);
+                            
+                            }
+                            if((crustOfPizza[g]==inputtedCrust[i])&&(proof=="big")){
+                                top2=top2+parseInt(priceOfCrustofPizzaBig[g]);
+                            
+                            }      
+                    }
+            }
             total=top0+top1+top2;
-         
-        
-        return total;
-        
-}
+            return total;
+            
+    }
 
-else{
-    z=1;
-    alert("invalid input");
-}
+    else{
+        z=1;
+        alert("invalid input");
+    }
 
 }
 var place,pro;
@@ -111,9 +101,6 @@ function deliver(){
     }
 }
 $(document).ready(function(){
-   
-
- 
 $("#add-order").click(function(){
     
 $(".again").append(' <div class="again1">'+
@@ -150,9 +137,6 @@ var inputtedName=$(this).find("input#name").val();
 var newClient=new Name(inputtedName);
 
 var newOrder=new Order();
-
-
-
  $(".topping1").each(function(){
    var inputtedTopping=$(this).find("input#topping").val();
  
@@ -161,21 +145,14 @@ var newOrder=new Order();
 });
 $(".size1").each(function(){
     var inputtedSize=$(this).find("input#size").val();
-  
      newOrder.size.push(inputtedSize); 
    
  });
  $(".crust1").each(function(){
     var inputtedCrust=$(this).find("input#crust").val();
-  
      newOrder.crust.push(inputtedCrust); 
    
  });
-
-
-
-
-  
   var result=compare(newOrder.size,newOrder.topping,newOrder.crust);  
   if(z==0){
     deliver();
@@ -200,7 +177,5 @@ $(".size1").each(function(){
   $("input#crust").val("");
   
 });
-
-
 });
 
