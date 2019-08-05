@@ -22,11 +22,11 @@ body{
     width:100%;
 }
 .welcome1{
-margin-top:20%;
-margin-bottom:20%;
-width:100%;
-border-radius: 100%;
-background-color:white;
+    margin-top:20%;
+    margin-bottom:20%;
+    width:100%;
+    border-radius: 100%;
+    background-color:white;
 }
 .about{
     margin-top:5%;
@@ -46,10 +46,10 @@ img:hover{
 }
 .footer{
     position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: red;
-  color: white;
-  text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
 }
