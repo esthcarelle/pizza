@@ -24,7 +24,9 @@ body{
 .welcome1{
 margin-top:20%;
 margin-bottom:20%;
-font-size:30px;
+width:100%;
+border-radius: 100%;
+background-color:white;
 }
 .about{
     margin-top:5%;
@@ -36,7 +38,10 @@ font-size:30px;
     color:white;
     height:80%;
 }
-.size > .row{
-margin-bottom:10%;
-margin-top:10%;
+img:hover{
+    width:100%;
+}
+.crust{
+    background-color:black;
+    color:white;
 }
