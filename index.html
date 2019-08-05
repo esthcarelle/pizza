@@ -67,7 +67,7 @@
         
            <div class="col-md-2">
 
-                <img src="images/recipe-8612_ArticleImage-CategoryPage_ID-1461069.jpg">
+                <a href="#fill-form"><img src="images/recipe-8612_ArticleImage-CategoryPage_ID-1461069.jpg"></a>
                 <p>vegetable for small pizza:1500frw</p>
                 <p>vegetable for medium pizza:2500frw</p>
                 <p>vegetable for big pizza:3500frw</p>
@@ -76,7 +76,7 @@
 
                <div class="col-md-2">
 
-                    <img src="images/sticky_onion_sausage_pizza.jpg">
+                    <a href="#fill-form"> <img src="images/sticky_onion_sausage_pizza.jpg"></a>
                    
                     <p>onion sausage for small pizza:1500frw</p>
                     <p>onion sausage for medium pizza:2500frw</p>
@@ -85,7 +85,7 @@
                    </div>
                    <div class="col-md-2">
 
-                        <img src="images/sugar-pine-pizza (1).jpg">
+                        <a href="#fill-form"> <img src="images/sugar-pine-pizza (1).jpg"></a>
                        
                         <p>sugar pine for small pizza:1500frw</p>
                         <p>sugar pine for medium pizza:2500frw</p>
@@ -94,7 +94,7 @@
                        </div>
                        <div class="col-md-2">
 
-                            <img src="images/pizza.jpg">
+                            <a href="#fill-form"><img src="images/pizza.jpg"></a>
                            
                             <p>sauteed brocoli for small pizza:1000frw</p>
                             <p>sauteed brocoli for medium pizza:2000frw</p>
@@ -103,7 +103,7 @@
                            </div>
                            <div class="col-md-2">
 
-                                <img src="images/sugar-pine-pizza (1).jpg">
+                                <a href="#fill-form"><img src="images/sugar-pine-pizza (1).jpg"></a>
                                
                                 <p>chiken for small pizza:1000frw</p>
                                 <p>chiken for medium pizza:2000frw</p>
@@ -112,7 +112,7 @@
                                </div>
                                    <div class="col-md-2">
 
-                                        <img src="images/sugar-pine-pizza (1).jpg">
+                                        <a href="#fill-form"> <img src="images/sugar-pine-pizza (1).jpg"></a>
                                        
                                       <p>pizza grec for small pizza:1000frw</p>
                                         <p>pizza grec for medium pizza:3000frw</p>
@@ -140,7 +140,7 @@
      
             </div>
             <div class="col-md-4">
-                 <img src="images/20579_sfs-gluten-free-pizza-37.jpg" width=60%>
+                    <a href="#fill-form"> <img src="images/20579_sfs-gluten-free-pizza-37.jpg" width=60%></a>
                  <p>gluten for small pizza:1000frw</p>
                  <p>gluten for medium pizza:2000frw</p>
                  <p>gluten for big pizza:3000frw</p>
@@ -148,7 +148,7 @@
       
              </div>
              <div class="col-md-4">
-                     <img src="images/download (1).jpeg" width="60%">
+                    <a href="#fill-form"><img src="images/download (1).jpeg" width="60%"></a> 
                      <p>italian crust for small pizza:1000frw</p>
                      <p>italian crust for medium pizza:2000frw</p>
                      <p>italian crust for big pizza:3000frw</p>
@@ -159,51 +159,59 @@
             </div>
        </div>
       
-<div class="container fill-form">
+<div class="container ">
+    <div id="fill-form">
 
-<h2>Fill nicely the form!</h2>
-    
-        <div class="form-group">
-                <label for="name">name</label>
-                <input type="text" class="form-control" id="name" placeholder="John Mary...">
-        </div>
-      
-        
-        <form id="blanks">
-           
-                <div class="again">
-                        <div class="again1">
-        <div class="form-group size1">
-                <label for="size">size</label>
-                <input type="text" class="form-control" id="size" placeholder="big,small or medium..">
-        </div>
-        <div class="topping">
-        <div class="form-group topping1" >
+            <h2 style="  background-color: #f44336;
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;margin-top:5%;margin-bottom:5%;">Fill form</h2>
+            <div class="form-group">
+                    <label for="name">name</label>
+                    <input type="text" class="form-control" id="name" placeholder="John Mary...">
+            </div>
+          
             
-                <label for="topping">topping</label>
-                <input type="text" class="form-control" id="topping" placeholder="vegetable...">
-            </div> 
+            <form id="blanks">
+               
+                    <div class="again">
+                            <div class="again1">
+            <div class="form-group size1">
+                    <label for="size">size</label>
+                    <input type="text" class="form-control" id="size" placeholder="big,small or medium..">
+            </div>
+            <div class="topping">
+            <div class="form-group topping1" >
+                
+                    <label for="topping">topping</label>
+                    <input type="text" class="form-control" id="topping" placeholder="vegetable...">
+                </div> 
+            </div>
+          
+            <div class="form-group crust1">
+                    <label for="crust">crust</label>
+                    <input type="text" class="form-control" id="crust" placeholder="gluten">
+            </div>
         </div>
+    </div>
+            <span class="btn btn-primary" id="add-topping">Another topping</span>
+            <span class="btn btn-primary" id="add-order">Another order</span>
+            <button type="submit" id="submit" class="btn btn-danger">order</button>
       
-        <div class="form-group crust1">
-                <label for="crust">crust</label>
-                <input type="text" class="form-control" id="crust" placeholder="gluten">
-        </div>
-    </div>
-</div>
-        <span class="btn btn-primary" id="add-topping">Another topping</span>
-        <span class="btn btn-primary" id="add-order">Another order</span>
-        <button type="submit" id="submit" class="btn btn-danger">order</button>
-  
-    </form>
-
-    <ul id="addresses">
-  
-        </ul>
-
-    </div>
+        </form>
     
-</div> 
+        <ul id="addresses">
+      
+            </ul>
+    
+        </div>
+        
+    </div> 
+    </div>
+
+
 
 </body>
 </html>
