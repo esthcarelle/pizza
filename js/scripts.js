@@ -101,81 +101,81 @@ function deliver(){
     }
 }
 $(document).ready(function(){
-$("#add-order").click(function(){
-    
-$(".again").append(' <div class="again1">'+
-'<div class="form-group size1">'+
-'<h2>Another Command</h2>'+
-       ' <label for="size">Size:</label>'+
-        '<input type="text" class="form-control" id="size" placeholder="big,small,medium..">'+
-'</div>'+
-'<div class="topping">'+
-'<div class="form-group topping1" >'+
-    
+    $("#add-order").click(function(){
+        
+    $(".again").append(' <div class="again1">'+
+    '<div class="form-group size1">'+
+    '<h2>Another Command</h2>'+
+        ' <label for="size">Size:</label>'+
+            '<input type="text" class="form-control" id="size" placeholder="big,small,medium..">'+
+    '</div>'+
+    '<div class="topping">'+
+    '<div class="form-group topping1" >'+
+        
+            '<label for="topping">Topping:</label>'+
+            '<input type="text" class="form-control" id="topping" placeholder="vegetable..">'
+        +'</div>'+ 
+    '</div>'+
+
+    '<div class="form-group crust1">'+
+            '<label for="crust">Crust:</label>'+
+            '<input type="text" class="form-control" id="crust" placeholder="gluten..">'+
+    '</div>'+
+    '</div>'
+    );
+    });
+    $("#add-topping").click(function(){
+        $(".topping").last().append(' <div class="form-group topping1" >' +           
         '<label for="topping">Topping:</label>'+
-        '<input type="text" class="form-control" id="topping" placeholder="vegetable..">'
-    +'</div>'+ 
-'</div>'+
+        '<input type="text" class="form-control" id="topping" placeholder="vegetable..">'+
+    '</div> ');
+    });
 
-'<div class="form-group crust1">'+
-        '<label for="crust">Crust:</label>'+
-        '<input type="text" class="form-control" id="crust" placeholder="gluten..">'+
-'</div>'+
-'</div>'
-);
-});
-$("#add-topping").click(function(){
-    $(".topping").last().append(' <div class="form-group topping1" >' +           
-    '<label for="topping">Topping:</label>'+
-    '<input type="text" class="form-control" id="topping" placeholder="vegetable..">'+
-'</div> ');
-});
+    $("form#blanks").submit(function(event){
+    event.preventDefault();
+    var inputtedName=$(this).find("input#name").val();
+    var newClient=new Name(inputtedName);
 
-$("form#blanks").submit(function(event){
-event.preventDefault();
-var inputtedName=$(this).find("input#name").val();
-var newClient=new Name(inputtedName);
-
-var newOrder=new Order();
- $(".topping1").each(function(){
-   var inputtedTopping=$(this).find("input#topping").val();
- 
-    newOrder.topping.push(inputtedTopping); 
-  
-});
-$(".size1").each(function(){
-    var inputtedSize=$(this).find("input#size").val();
-     newOrder.size.push(inputtedSize); 
-   
- });
- $(".crust1").each(function(){
-    var inputtedCrust=$(this).find("input#crust").val();
-     newOrder.crust.push(inputtedCrust); 
-   
- });
-  var result=compare(newOrder.size,newOrder.topping,newOrder.crust);  
-  if(z==0){
-    deliver();
-  }
-  
-  var additional;
-  if(pro==1){
-    additional=2000
-  }
-  else{
-      additional=0;
-  }
-  result=result+additional;
-  newClient.order.push(newOrder); 
-  
-  newClient.order.forEach(function(address) {
-    $("ul#addresses").last().append("<p>" +"Topping:"+ address.topping +"="+top1 +"<br>"+"Size:"+address.size + "= " +top0 +"<br>"+"Crust:"+ address.crust +"="+top2+"<br>"+ "additional fee for delivery ="+additional+"<br>"+"total::"+result+"</p>"  );
-  });
-  $("input#name").val("");
-  $("input#size").val("");
-  $("input#topping").val("");
-  $("input#crust").val("");
-  
-});
+    var newOrder=new Order();
+    $(".topping1").each(function(){
+    var inputtedTopping=$(this).find("input#topping").val();
+    
+        newOrder.topping.push(inputtedTopping); 
+    
+    });
+    $(".size1").each(function(){
+        var inputtedSize=$(this).find("input#size").val();
+        newOrder.size.push(inputtedSize); 
+    
+    });
+    $(".crust1").each(function(){
+        var inputtedCrust=$(this).find("input#crust").val();
+        newOrder.crust.push(inputtedCrust); 
+    
+    });
+    var result=compare(newOrder.size,newOrder.topping,newOrder.crust);  
+    if(z==0){
+        deliver();
+    }
+    
+    var additional;
+    if(pro==1){
+        additional=2000
+    }
+    else{
+        additional=0;
+    }
+    result=result+additional;
+    newClient.order.push(newOrder); 
+    
+    newClient.order.forEach(function(address) {
+        $("ul#addresses").last().append("<p>" +"Topping:"+ address.topping +"="+top1 +"<br>"+"Size:"+address.size + "= " +top0 +"<br>"+"Crust:"+ address.crust +"="+top2+"<br>"+ "additional fee for delivery ="+additional+"<br>"+"total::"+result+"</p>"  );
+    });
+    $("input#name").val("");
+    $("input#size").val("");
+    $("input#topping").val("");
+    $("input#crust").val("");
+    
+    });
 });
 
