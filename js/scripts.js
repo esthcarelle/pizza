@@ -120,7 +120,7 @@ $(".again").append(' <div class="again1">'+
 '<div class="form-group size1">'+
 '<h2>Another Command</h2>'+
        ' <label for="size">Size:</label>'+
-        '<input type="text" class="form-control" id="size" placeholder="big,small,medium..>'+
+        '<input type="text" class="form-control" id="size" placeholder="big,small,medium..">'+
 '</div>'+
 '<div class="topping">'+
 '<div class="form-group topping1" >'+
@@ -140,7 +140,7 @@ $(".again").append(' <div class="again1">'+
 $("#add-topping").click(function(){
     $(".topping").last().append(' <div class="form-group topping1" >' +           
     '<label for="topping">Topping:</label>'+
-    '<input type="text" class="form-control" id="topping">'+
+    '<input type="text" class="form-control" id="topping" placeholder="vegetable..">'+
 '</div> ');
 });
 
