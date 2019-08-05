@@ -1,7 +1,42 @@
 img{
-    width:50%;
+    width:70%;
+
 }
 body{
     text-align:center;
     
+}
+.welcome{
+    background-image:url("../images/pizza\ \(1\).jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    color:black;
+    width:100%;
+    
+
+}
+.welcome1{
+margin-top:20%;
+margin-bottom:20%;
+font-size:30px;
+}
+.about{
+    margin-top:5%;
+    margin-bottom:5%;
+
+}
+.size{
+    background-color:black;
+    color:white;
+    height:80%;
+}
+.size > .row{
+margin-bottom:10%;
+margin-top:10%;
 }
