@@ -5,6 +5,7 @@ img{
 body{
     text-align:center;
     font-style:monospace;
+    font-family: 'Sofia';font-size: 22px;
     
 }
 .welcome{
@@ -19,8 +20,6 @@ body{
     text-align:center;
     color:black;
     width:100%;
-    
-
 }
 .welcome1{
 margin-top:20%;
@@ -32,7 +31,6 @@ background-color:white;
 .about{
     margin-top:5%;
     margin-bottom:5%;
-
 }
 .size{
     background-color:black;
